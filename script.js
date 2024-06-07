@@ -104,7 +104,7 @@ const clear = () => {
 }
 
 const showStory = (index) => {
-    const storyFile = `stories/story${index}.txt`; // Assumes your .txt files follow a naming convention like story0.txt, story1.txt, etc.
+    const storyFile = `stories/story${index}.txt`; 
 
     const xhr = new XMLHttpRequest();
     xhr.open('GET', storyFile, true);
@@ -113,7 +113,7 @@ const showStory = (index) => {
             if (xhr.status === 200) {
                 const text = xhr.responseText;
                 document.querySelector(`#desc${index}`).textContent = text;
-                data[index].desc = text; // Update the data array as well
+                data[index].desc = text; 
             } else {
                 document.querySelector(`#desc${index}`).textContent = "Story not found.";
             }
